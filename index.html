@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardin Parti | Silver & Stone — Coming Soon</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-cream: #F9F6F0;
+            --emerald-dark: #1C3B2B;
+            --emerald-deep: #0D2218;
+            --emerald-light: #2D5A42;
+            --sage: #A3B19B;
+            --gold-accent: #C5A059;
+            --text-dark: #2B2B2B;
+            --white-glass: rgba(255, 255, 255, 0.75);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(163, 177, 155, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(28, 59, 43, 0.08) 0%, transparent 40%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
+            background: var(--white-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 12px;
+            padding: 50px 30px;
+            box-shadow: 0 15px 35px rgba(13, 34, 24, 0.08);
+        }
+
+        .logo-container {
+            margin-bottom: 25px;
+        }
+
+        .logo-container img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: var(--emerald-dark);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .subtext {
+            font-size: 0.95rem;
+            color: #555;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Subscription Form */
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 450px;
+            margin: 0 auto 30px auto;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex: 1;
+            padding: 14px 18px;
+            border: 1px solid var(--sage);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.9);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-form input[type="email"]:focus {
+            border-color: var(--emerald-dark);
+        }
+
+        .newsletter-form button {
+            padding: 14px 28px;
+            background-color: var(--emerald-dark);
+            color: #FAF6F0;
+            border: 1px solid var(--emerald-dark);
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--emerald-deep);
+            border-color: var(--gold-accent);
+        }
+
+        /* Footer Links / Socials */
+        .footer-note {
+            font-size: 0.8rem;
+            color: #777;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold-accent);
+            margin: 25px auto;
+        }
+
+        @media (max-width: 500px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <!-- Logo Display -->
+        <div class="logo-container">
+            <!-- Replace 'logo.jpg' with the actual path to your logo image file -->
+            <img src="Logo-Jardin-Parti.png" alt="Jardin Parti - Silver & Stone Logo">
+        </div>
+
+        <p class="tagline">Coming Soon!</p>
+        
+        <p class="subtext">
+            Our curated collection of handcrafted silver and stone treasures is currently being prepared. Join our private guest list to receive exclusive early access and launch updates.
+        </p>
+
+        <!-- Email Signup Form -->
+        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for joining our private list!');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Notify Me</button>
+        </form>
+
+        <div class="divider"></div>
+
+        <div class="footer-note">
+           <!-- &copy; 2026 Jardin Parti. All Rights Reserved. -->
+        </div>
+    </main>
+
+</body>
+</html>
