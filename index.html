@@ -3,24 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jardin Parti | Silver & Stone — Coming Soon</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    
+    <title>Jardin Parti | Silver & Stone</title>
     <style>
-        :root {
-            --bg-cream: #F9F6F0;
-            --emerald-dark: #1C3B2B;
-            --emerald-deep: #0D2218;
-            --emerald-light: #2D5A42;
-            --sage: #A3B19B;
-            --gold-accent: #C5A059;
-            --text-dark: #2B2B2B;
-            --white-glass: rgba(255, 255, 255, 0.75);
-        }
-
+        /* --- Reset & Core Styles --- */
         * {
             margin: 0;
             padding: 0;
@@ -28,160 +13,469 @@
         }
 
         body {
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
-            font-family: 'Montserrat', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(163, 177, 155, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(28, 59, 43, 0.08) 0%, transparent 40%);
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 650px;
-            width: 100%;
-            text-align: center;
-            background: var(--white-glass);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            border-radius: 12px;
-            padding: 50px 30px;
-            box-shadow: 0 15px 35px rgba(13, 34, 24, 0.08);
-        }
-
-        .logo-container {
-            margin-bottom: 25px;
-        }
-
-        .logo-container img {
-            max-width: 280px;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .tagline {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            color: var(--emerald-dark);
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .subtext {
-            font-size: 0.95rem;
-            color: #555;
-            font-weight: 300;
+            font-family: 'Georgia', serif;
+            background-color: #121212;
+            color: #f4f4f0;
             line-height: 1.6;
-            margin-bottom: 35px;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        /* Subscription Form */
-        .newsletter-form {
+        a {
+            color: #8ba88f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #c2d1c5;
+        }
+
+       /* --- Navigation --- */
+        header {
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #2d5a3b;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
             display: flex;
-            gap: 10px;
-            max-width: 450px;
-            margin: 0 auto 30px auto;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
 
-        .newsletter-form input[type="email"] {
-            flex: 1;
-            padding: 14px 18px;
-            border: 1px solid var(--sage);
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.9);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .newsletter-form input[type="email"]:focus {
-            border-color: var(--emerald-dark);
-        }
-
-        .newsletter-form button {
-            padding: 14px 28px;
-            background-color: var(--emerald-dark);
-            color: #FAF6F0;
-            border: 1px solid var(--emerald-dark);
-            border-radius: 4px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
+        .logo-area {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            font-weight: 400;
+            color: #f4f4f0;
+            line-height: 1.2;
         }
 
-        .newsletter-form button:hover {
-            background-color: var(--emerald-deep);
-            border-color: var(--gold-accent);
-        }
-
-        /* Footer Links / Socials */
-        .footer-note {
-            font-size: 0.8rem;
-            color: #777;
+        .logo-area span {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
+            color: #8ba88f;
+            text-transform: none; /* Keeps it in standard title case like the logo */
+            margin-top: 2px;
         }
 
-        .divider {
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        nav ul li a.active {
+            color: #fff;
+            border-bottom: 2px solid #2d5a3b;
+            padding-bottom: 5px;
+        }
+
+        /* --- Section Framework --- */
+        .page-section {
+            display: none;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        .page-section.active-section {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f4f4f0;
+            letter-spacing: 1px;
+        }
+
+        .section-divider {
             width: 60px;
             height: 1px;
-            background: var(--gold-accent);
-            margin: 25px auto;
+            background-color: #2d5a3b;
+            margin: 0 auto 40px auto;
         }
 
-        @media (max-width: 500px) {
-            .newsletter-form {
-                flex-direction: column;
-            }
+        /* --- Home Page --- */
+        .hero {
+            text-align: center;
+            padding: 40px 0 80px 0;
+            background: linear-gradient(to bottom, #1a1a1a, #121212);
+        }
 
-            .container {
-                padding: 35px 20px;
-            }
+        .hero-logo-placeholder {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            border: 1px solid #2d5a3b;
+            padding: 10px;
+            background: #18221b;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #8ba88f;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: #1a1a1a;
+            border: 1px solid #232323;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #2d5a3b;
+        }
+
+        .stock-img {
+            width: 100%;
+            height: 350px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #232323;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-card h3 {
+            padding: 20px 10px 5px 10px;
+            font-size: 1.4rem;
+            color: #f4f4f0;
+        }
+
+        .feature-card p {
+            padding: 0 20px 20px 20px;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: #8ba88f;
+        }
+
+        /* --- About Page --- */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #d1d1cc;
+        }
+
+        /* --- Products Page (Coming Soon) --- */
+        .coming-soon-container {
+            text-align: center;
+            padding: 100px 20px;
+            background: #1a1a1a;
+            border: 1px dashed #2d5a3b;
+            border-radius: 4px;
+        }
+
+        .coming-soon-container h3 {
+            font-size: 2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #8ba88f;
+            margin-bottom: 15px;
+        }
+
+        /* --- Contact Page --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #8ba88f;
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+            color: #d1d1cc;
+        }
+
+        .contact-form {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 4px;
+            border: 1px solid #232323;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8ba88f;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #121212;
+            border: 1px solid #333;
+            color: #fff;
+            font-family: sans-serif;
+            border-radius: 2px;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #2d5a3b;
+        }
+
+        button {
+            background-color: #2d5a3b;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #3d7a50;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #0d0d0d;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #1a1a1a;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #555;
+        }
+
+        /* Responsive Adjustment */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 20px; }
+            .about-content, .contact-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <main class="container">
-        <!-- Logo Display -->
-        <div class="logo-container">
-            <!-- Replace 'logo.jpg' with the actual path to your logo image file -->
-            <img src="Jardin-Party-Logo-Revised.png" alt="Jardin Parti - Silver & Stone Logo">
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                Jardin Parti
+                <span>Silver & Stone</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a onclick="switchPage('home')" id="nav-home" class="active">Home</a></li>
+                    <li><a onclick="switchPage('products')" id="nav-products'">Products</a></li>
+                    <li><a onclick="switchPage('about')" id="nav-about">About</a></li>
+                    <li><a onclick="switchPage('contact')" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page-section active-section">
+        <div class="hero">
+            <div class="hero-logo-placeholder">
+                <!-- Insert your Jardin-Party-Logo-Revised.jpg here -->
+                <p style="font-family:sans-serif; font-size: 0.75rem; color:#8ba88f; text-transform:uppercase;"><img src = "logo.jpg" width="500"></p>
+            </div>
+            <h1>Jardin Parti</h1>
+            <p>Sterling Silver & Organic Gemstones</p>
         </div>
 
-        <p class="tagline">Coming Soon!</p>
+        <h2>Curated Classics</h2>
+        <div class="section-divider"></div>
         
-        <p class="subtext">
-            Our curated collection of handcrafted silver and stone treasures is currently being prepared. Join our private guest list to receive exclusive early access and launch updates.
-        </p>
-
-        <!-- Email Signup Form -->
-        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for joining our private list!');">
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Notify Me</button>
-        </form>
-
-        <div class="divider"></div>
-
-        <div class="footer-note">
-           <!-- &copy; 2026 Jardin Parti. All Rights Reserved. -->
+        <div class="featured-grid">
+            <!-- Pendants -->
+            <div class="feature-card">
+                <div class="stock-img" style="background-color: #1e2520;">[ Stock Photo: Classic Sterling Silver Pendant with Deep Green Tourmaline ]</div>
+                <h3>Classic Pendants</h3>
+                <p>Timeless designs balancing structured geometric frames with the raw allure of nature's finest colored stones.</p>
+            </div>
+            <!-- Rings -->
+            <div class="feature-card">
+                <div class="stock-img" style="background-color: #22251e;">[ Stock Photo: Earthy Sterling Silver Ring set with Moss Agate ]</div>
+                <h3>Statement Rings</h3>
+                <p>Intricate, organic details hand-wrought in pure sterling silver, accentuating rich, natural inclusions.</p>
+            </div>
+            <!-- Earrings -->
+            <div class="feature-card">
+                <div class="stock-img" style="background-color: #1e2225;">[ Stock Photo: Drop Earrings in Sterling Silver featuring Peridot ]</div>
+                <h3>Elegance Earrings</h3>
+                <p>Delicate drops and timeless studs designed without human pretense—pure mineral brilliance catching the light.</p>
+            </div>
         </div>
-    </main>
+    </section>
 
+    <!-- PRODUCTS PAGE -->
+    <section id="products" class="page-section">
+        <h2>The Collection</h2>
+        <div class="section-divider"></div>
+        <div class="coming-soon-container">
+            <h3>Coming Soon</h3>
+            <p>We are currently shaping and polishing our premier collection of sterling silver and colored gemstone pieces. Sign up via our contact page to be notified of our maiden garden party launch.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page-section">
+        <h2>Our Roots</h2>
+        <div class="section-divider"></div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Born from an appreciation for the structured beauty of classical estate gardens and the raw, unyielding charm of earth-born minerals, <strong>Jardin Parti</strong> marries sterling silver with rich, vibrant gemstones.</p>
+                <p>We believe jewelry should feel like an extension of the earth—organic, heavy with history, and timelessly styled. Every ring, pendant, and earring is chosen and designed to honor the classic aesthetics of jewelry design while letting the natural variance of colored stones speak for themselves.</p>
+                <p>No artificial filters, no fleeting trends. Just timeless silver and genuine stone.</p>
+            </div>
+            <div class="stock-img" style="height: 400px; background-color: #1c211d;">
+                [ Stock Photo: Raw Emerald & Sterling Silver Settings on a Rustic Wooden Bench ]
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page-section">
+        <h2>Connect With Us</h2>
+        <div class="section-divider"></div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Enter the Garden</h3>
+                <p>Whether you have a question about our upcoming collections, want to inquire about custom silver pairings, or simply wish to share a mutual appreciation for classical lapidary arts, we welcome your note.</p>
+                <p><strong>Email:</strong> inquiries@jardinparti.com<br><strong>Studio Location:</strong> Jacksonville, Florida</p>
+            </div>
+            <div class="contact-form">
+                <form onsubmit="event.preventDefault(); alert('Thank you for reaching out to Jardin Parti. We will respond shortly.');">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!--<p>&copy; 2026 Jardin Parti. All Rights Reserved. Crafted with Sterling Silver & Genuine Gemstones.</p>-->
+    </footer>
+
+    <!-- Simple Navigation Script -->
+    <script>
+        function switchPage(pageId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active-section');
+            });
+
+            // Remove active class from links
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected section
+            const targetSection = document.getElementById(pageId);
+            if(targetSection) {
+                targetSection.classList.add('active-section');
+            }
+
+            // Highlight selected nav item
+            // Account for minor id mismatch handling if clicking links
+            const activeLink = document.querySelector(`[onclick="switchPage('${pageId}')"]`);
+            if(activeLink) {
+                activeLink.classList.add('active');
+            }
+            
+            // Scroll back to top smoothly
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 </body>
 </html>
