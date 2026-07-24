@@ -421,23 +421,27 @@
                 <p>Whether you have a question about our upcoming collections, want to inquire about custom silver pairings, or simply wish to share a mutual appreciation for classical lapidary arts, we welcome your note.</p>
                 <p><strong>Email:</strong> inquiries@jardinparti.com<br><strong>Studio Location:</strong> Jacksonville, Florida</p>
             </div>
-            <div class="contact-form">
-                <form onsubmit="event.preventDefault(); alert('Thank you for reaching out to Jardin Parti. We will respond shortly.');">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
+           <div class="contact-form">
+    		<form action="https://api.web3forms.com/submit" method="POST">
+       		 <!-- Replace YOUR_ACCESS_KEY_HERE with your Web3Forms access key -->
+       		 <input type="hidden" name="access_key" value="ec8390c7-9336-4037-83c2-0800d12d96f3">
+
+       		 <div class="form-group">
+           		 <label for="name">Name</label>
+           		 <input type="text" id="name" name="name" required>
+       		 </div>
+        	<div class="form-group">
+           		 <label for="email">Email</label>
+           		 <input type="email" id="email" name="email" required>
+       		 </div>
+        	<div class="form-group">
+          	  <label for="message">Message</label>
+           	 <textarea id="message" name="message" rows="5" required></textarea>
+       	 </div>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</div>
         </div>
     </section>
 
